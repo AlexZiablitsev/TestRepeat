@@ -34,4 +34,34 @@ public class UnitTests {
         Calculator calculator = new Calculator();
         Assert.assertThrows(java.lang.ArithmeticException.class, () -> calculator.div(4, 0));
     }
+
+    @Test
+    public void doubleDivTest() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(calculator.div(2.44, 2.0), 1.22);
+    }
+
+    @Test
+    public void doubleDivTest1() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(calculator.div(4.0, 0), Double.POSITIVE_INFINITY);
+    }
+
+    @Test
+    public void doubleDivTest2() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(calculator.div(-4.0, 0), Double.NEGATIVE_INFINITY);
+    }
+
+    @Test
+    public void squareTest() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(calculator.square(16), 4);
+    }
+
+    @Test
+    public void squareTest1() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(calculator.square(-16), 0);
+    }
 }
