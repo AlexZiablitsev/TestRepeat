@@ -88,10 +88,8 @@ public class FirstTests {
         Thread.sleep(2000);
         WebElement resultLaminate = driver.findElement(By.xpath("//span[text() = '53']"));
         String resultLaminateText = resultLaminate.getText();
-        WebElement resultPackage = driver.findElement(By.xpath("//span[text() = '8']"));
+        WebElement resultPackage = driver.findElement(By.xpath("//span[text() = '7']"));
         String resultPackageText = resultPackage.getText();
-        System.out.println(resultLaminateText);
-
 
         Assert.assertEquals(resultLaminateText, "53", "Требуемое количество досок ламината отображается не верно.");
         Assert.assertEquals(resultPackageText, "7", "‘Количество упаковок ламината отображается не верно.");
